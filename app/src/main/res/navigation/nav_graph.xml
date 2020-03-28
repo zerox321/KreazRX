@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/OffersFragment">
+
+    <fragment
+        android:id="@+id/OffersFragment"
+        android:name="com.eslam.kreazrx.ui.offer.OffersFragment"
+        android:label="@string/OffersFragment"
+        tools:layout="@layout/fragment_offers">
+
+        <action
+            android:id="@+id/action_OffersFragment_to_offerDetail"
+            app:destination="@id/offerDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/offerDetail"
+        android:name="com.eslam.kreazrx.ui.offer.offerDetail.OfferDetailFragment"
+        android:label="@string/offerDetail"
+        tools:layout="@layout/fragment_offer_detail">
+        <argument
+            android:name="offer"
+            app:argType="com.eslam.kreazrx.ui.offer.OfferResponse$DataBean"
+            app:nullable="true" />
+
+
+    </fragment>
+</navigation>
